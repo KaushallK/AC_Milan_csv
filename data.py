@@ -21,10 +21,9 @@ def ExportCSV():
 
 def SquadList():
     get_url
-    time.sleep(2)
+    browser.implicitlywait(2)
     browser.find_element_by_xpath('//*[@id="header"]/div[3]/form/div/div/input[2]').send_keys(team)
     browser.find_element_by_xpath('//*[@id="header"]/div[3]/form/div/div/div/div/div[2]/div').click()
-    time.sleep(2)
     grab_cur_url
     squad_list = df[tbl_players]
     global squad
